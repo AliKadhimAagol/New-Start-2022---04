@@ -326,3 +326,40 @@ header {
   color: #fff;
 }
 /* End marketing1 */
+/* Start marketing2 */
+.marketing2 {
+  background-color: var(--section-background);
+}
+.marketing2 .container {
+  display: flex;
+  column-gap: 60px;
+}
+.marketing2 .left,
+.marketing2 .right {
+  flex-basis: 50%;
+}
+.marketing2 .right {
+  padding: 30px;
+}
+.marketing2 .right h2 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.marketing2 .right .app {
+  margin-bottom: 20px;
+}
+.marketing2 .right .app i {
+  color: var(--second-color);
+  display: inline-block;
+  margin-right: 10px;
+}
+.marketing2 .right .app span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.marketing2 .right p {
+  line-height: 1.6;
+  color: #777;
+}
+/* End marketing2 */
