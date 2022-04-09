@@ -2,6 +2,9 @@
   --main-color: #233148;
   --second-color: #33d2fd;
   --main-transition: 1s;
+  --second-transition: 0.3s;
+  --section-padding: 60px;
+  --section-background: #fafafc;
 }
 * {
   margin: 0;
@@ -71,8 +74,12 @@ img {
   color: #fff;
   text-transform: capitalize;
   font-weight: bold;
+  display: inline-block;
 }
-
+section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
 /* styling */
 header {
   background-color: var(--second-color);
@@ -176,3 +183,146 @@ header {
   height: 470px;
 }
 /* End landing */
+/* start cards */
+.cards {
+  background-color:var(--section-background);
+  height: 100vh;
+}
+.cards .container {
+  display: flex;
+  background-color: var
+}
+.cards .left {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards .left img {
+  height: 60%;
+}
+.cards .right {
+  position: relative;
+}
+.cards .right .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 270px;
+  height: 240px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 4px 13px -3px #ccc;
+  padding: 20px;
+  transition: var(--main-transition);
+}
+.cards .right .card:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+.cards .right .card:hover h3 {
+  color: #fff;
+}
+.cards .card:first-of-type {
+  top: -20px;
+}
+.cards .card:nth-last-of-type(2) {
+  top: -20px;
+  right: -620px;
+}
+.cards .card:nth-last-of-type(3) {
+  top: 260px;
+  right: -180px;
+}
+.cards .card:last-of-type {
+  top: 260px;
+  right: -540px;
+}
+.cards .card .icon {
+  padding: 10px;
+  font-size: 30px;
+  color: var(--second-color);
+}
+.cards .card h3 {
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 16;
+  font-weight: 500;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.cards .card p {
+  text-align: center;
+  line-height: 1.6;
+  color: #ccc;
+}
+/* End cards */
+
+/* start marketing1 */
+.marketing1 .container {
+  display: flex;
+  column-gap: 150px;
+}
+.marketing1 .left,
+.marketing1 .right {
+  flex-basis: 50%;
+}
+.marketing1 .left {
+  direction: rtl;
+}
+.marketing1 .left h2 {
+  padding: 50px 0;
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.marketing1 .left p {
+  color: #777;
+  line-height: 1.8;
+}
+.marketing1 .left .btn {
+  background-color: var(--second-color);
+  margin-top: 20px;
+  padding: 10px 35px;
+  transition: background-color var(--second-transition);
+}
+.marketing1 .left .btn:hover {
+  background-color: var(--main-color);
+}
+.marketing1 .right .serv {
+  box-shadow: 0px 4px 13px -3px #ccc;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.marketing1 .right .serv i {
+  font-size: 25px;
+}
+.marketing1 .right .serv .info {
+  margin-left: 20px;
+}
+.marketing1 .right .serv .info h4 {
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+.marketing1 .right .serv .info p {
+  margin-top: 20px;
+  color: #777;
+  line-height: 1.5;
+}
+.marketing1 .right .active {
+  color: #fff;
+  background-color: var(--second-color);
+}
+.marketing1 .right .active i {
+  color: #000;
+}
+.marketing1 .right .active .info p {
+  color: #fff;
+}
+/* End marketing1 */
