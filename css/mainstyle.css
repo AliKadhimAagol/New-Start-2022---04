@@ -24,47 +24,29 @@ img {
   max-width: 100%;
 }
 .container {
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Small */
+@media (min-width: 768px) {
   .container {
-    width: 320px;
+    width: 750px;
   }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Medium */
+@media (min-width: 992px) {
   .container {
-    width: 768px;
+    width: 970px;
   }
 }
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .container {
-    width: 992px;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Large */
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
-  .container {
-    width: 1400px;
-  }
-} */
-
 /* general style */
 .btn {
   background-color: transparent;
@@ -173,6 +155,10 @@ header {
   color: var(--main-color);
   background-color: #fff;
   margin-right: 20px;
+  width: 165px;
+}
+.landing .buttons .btn:last-of-type {
+  width: 165px;
 }
 .landing .buttons .btn:hover {
   background-color: var(--main-color);
@@ -182,41 +168,73 @@ header {
 .landing img {
   height: 470px;
 }
+@media (max-width: 768px) {
+  .landing img {
+    width: 150px;
+  }
+}
 /* End landing */
 /* start cards */
 .cards {
   background-color:var(--section-background);
-  height: 100vh;
 }
 .cards .container {
   display: flex;
-  background-color: var
+  gap: 30px;
+}
+@media (max-width: 992px) {
+  .cards .container {
+    flex-direction: column;
+  }
 }
 .cards .left {
-  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-basis: 30%;
 }
 .cards .left img {
   height: 60%;
 }
-.cards .right {
-  position: relative;
+@media (max-width: 992px) {
+  .cards .left img {
+    height: 300px;
+  }
 }
+@media (max-width: 768px) {
+  .cards .left {
+    display: none;
+  }
+}
+.cards .right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+/* @media (min-width: 992px) {
+  .cards .right {
+    display: flex;
+  }
+} */
 .cards .right .card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 270px;
-  height: 240px;
-  position: absolute;
   background-color: #fff;
   box-shadow: 0px 4px 13px -3px #ccc;
   padding: 20px;
   transition: var(--main-transition);
 }
+/* @media (min-width: 992px) {
+  .cards .right .card {
+    position: sticky;
+    
+  }
+} */
 .cards .right .card:hover {
   background-color: var(--main-color);
   color: #fff;
@@ -266,6 +284,11 @@ header {
   display: flex;
   column-gap: 150px;
 }
+@media (max-width: 992px) {
+  .marketing1 .container {
+    gap: 50px;
+  }
+}
 .marketing1 .left,
 .marketing1 .right {
   flex-basis: 50%;
@@ -282,6 +305,11 @@ header {
 .marketing1 .left p {
   color: #777;
   line-height: 1.8;
+}
+@media (max-width: 992px) {
+  .marketing1 .left p {
+    font-size: 14px;
+  }
 }
 .marketing1 .left .btn {
   background-color: var(--second-color);
@@ -315,6 +343,11 @@ header {
   color: #777;
   line-height: 1.5;
 }
+@media (max-width: 992px) {
+  .marketing1 .right .serv .info p {
+    font-size: 14px;
+  }
+}
 .marketing1 .right .active {
   color: #fff;
   background-color: var(--second-color);
@@ -333,6 +366,11 @@ header {
 .marketing2 .container {
   display: flex;
   column-gap: 60px;
+}
+@media (max-width: 992px) {
+  .marketing2 .container {
+    gap:0;
+  }
 }
 .marketing2 .left,
 .marketing2 .right {
@@ -362,6 +400,11 @@ header {
   line-height: 1.6;
   color: #777;
 }
+@media (max-width: 992px) {
+  .marketing2 .right p {
+    font-size: 14px;
+  }
+}
 /* End marketing2 */
 /* Start marketing3 */
 .marketing3 {
@@ -382,6 +425,11 @@ header {
 .marketing3 .left img {
   height: 500px;
   margin-right: 100px;
+}
+@media (max-width: 992px) {
+  .marketing3 .left img {
+    height: 300px;
+  }
 }
 .marketing3 .right {
   width: 400px;
@@ -421,6 +469,12 @@ header {
   justify-content: center;
   gap: 50px;
 } 
+@media (max-width: 768px) {
+  .infos-sub .infos {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
 .infos-sub .infos .info {
   width: 150px;
 }
@@ -469,6 +523,12 @@ header {
   background-color: var(--section-background);
   color: var(--main-color);
 }
+@media (max-width: 768px) {
+  .infos-sub .subscribe .count input[type=text] {
+    width: 300px;
+  }
+
+}
 .infos-sub .subscribe .count input[type=text]:focus {
   outline: none;
 }
@@ -488,6 +548,11 @@ header {
 /* start footer */ 
 footer {
   background-color: var(--main-color);
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 0 20px;
+  }
 }
 footer .container {
   display: flex;
