@@ -29,6 +29,12 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+/* extra small */
+@media (min-width: 520px) {
+  .container {
+    width: 480px;
+  }
+}
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -61,6 +67,12 @@ img {
 section {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+}
+@media (max-width: 520px) {
+  section {
+    padding-top: 20px;
+  padding-bottom: 20px;
+  }
 }
 /* styling */
 header {
@@ -106,7 +118,11 @@ header {
   display: flex;
   align-items: center;
 }
-
+@media (max-width: 520px) {
+  .top-nav ul {
+    display: none;
+  }
+}
 .top-nav ul li a {
   color: #fff;
   text-transform: capitalize;
@@ -118,11 +134,29 @@ header {
   transition: background-color var(--main-transition),
     color var(--main-transition);
 }
+@media (max-width: 768px) {
+  .top-nav ul li a {
+    margin-left: 20px;
+  }
+}
 .top-nav ul a:hover {
   background-color: #fff;
   color: var(--main-color);
 }
-
+.bur-icon {
+  width: 20px;
+}
+.bur-icon span {
+  display: block;
+  height: 2px;
+  background-color: var(--main-color);
+  margin-bottom: 5px;
+}
+@media (min-width: 520px) {
+  .bur-icon {
+    display: none;
+  }
+}
 /* End top navbar */
 /* Start landing */
 .landing {
@@ -165,12 +199,25 @@ header {
   border: none;
   color: #fff;
 }
+@media (max-width: 520px) {
+  .landing h1 {
+    font-size: 20px;
+  }
+  .landing p {
+    font-size: 12px;
+  }
+  .landing .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .landing img {
   height: 470px;
 }
 @media (max-width: 768px) {
   .landing img {
-    width: 150px;
+    height: 200px;
   }
 }
 /* End landing */
@@ -229,12 +276,6 @@ header {
   padding: 20px;
   transition: var(--main-transition);
 }
-/* @media (min-width: 992px) {
-  .cards .right .card {
-    position: sticky;
-    
-  }
-} */
 .cards .right .card:hover {
   background-color: var(--main-color);
   color: #fff;
@@ -287,6 +328,18 @@ header {
 @media (max-width: 992px) {
   .marketing1 .container {
     gap: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .marketing1 .container {
+    flex-direction: column;
+    padding: 0 50px;
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .marketing1 .container {
+    padding: 15px;
   }
 }
 .marketing1 .left,
@@ -372,6 +425,25 @@ header {
     gap:0;
   }
 }
+@media (max-width: 768px) {
+  .marketing2 .container {
+    flex-direction: column-reverse;
+    padding: 0 50px;
+    width: 100%;
+  }
+  .marketing2 .left {
+    display: flex;
+    justify-content: center;
+  }
+  .marketing2 .left img {
+    width: 400px;
+  }
+}
+@media (max-width: 520px) {
+  .marketing2 .container {
+    padding: 15px;
+  }
+}
 .marketing2 .left,
 .marketing2 .right {
   flex-basis: 50%;
@@ -422,6 +494,11 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
+@media (max-width: 520px) {
+  .marketing3 .left {
+    display: none;
+  }
+}
 .marketing3 .left img {
   height: 500px;
   margin-right: 100px;
@@ -447,6 +524,11 @@ header {
 .marketing3 .right img {
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .marketing3 .right img {
+    width: 300px;
+  }
+}
 .marketing3 .get {
   position: absolute;
   left: 50%;
@@ -458,6 +540,13 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: 0 9px 14px -3px #f63b7d;
+}
+@media (max-width: 520px) {
+  .marketing3 .get {
+    font-size: 14px;
+    width: 70%;
+    text-align: center;
+  }
 }
 /* End marketing3 */
 /* Start info & subscribe */
@@ -477,6 +566,11 @@ header {
 }
 .infos-sub .infos .info {
   width: 150px;
+}
+@media (max-width: 520px) {
+  .infos-sub .infos .info {
+    width: 100px;
+  }
 }
 .infos-sub .infos .info h4 {
   color: var(--main-color);
@@ -514,6 +608,12 @@ header {
   justify-content: center;
   gap: 10px;
 }
+@media (max-width: 768px) {
+  .infos-sub .subscribe .count {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .infos-sub .subscribe .count input[type=text] {
   font-size: 16px;
   padding: 15px 30px;
@@ -544,6 +644,13 @@ header {
   color: #fff;
   background-color: var(--main-color);
 }
+@media (max-width: 768px) {
+  .infos-sub .subscribe .count input[type=text],
+  .infos-sub .subscribe .count a {
+    width: 100%;
+    text-align: center;
+  }
+}
 /* End info & subscribe */
 /* start footer */ 
 footer {
@@ -559,6 +666,14 @@ footer .container {
   justify-content: space-between;
   padding: 20px 0;
   color: #fff;
+  flex-wrap: wrap;
+}
+@media (max-width: 520px) {
+  footer .container {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
 footer .text p {
   color: #fff;
