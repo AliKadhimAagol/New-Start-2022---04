@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
 :root {
   --main-color: #233148;
   --second-color: #33d2fd;
@@ -572,7 +573,7 @@ header {
     width: 100px;
   }
 }
-.infos-sub .infos .info h4 {
+.infos-sub .infos .info h6 {
   color: var(--main-color);
   text-transform: capitalize;
   margin-bottom: 30px;
